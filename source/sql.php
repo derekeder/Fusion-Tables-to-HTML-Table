@@ -52,7 +52,7 @@ class SQLBuilder {
     
     $select = "SELECT $cols FROM $table_id $condition $orderby $limit";
     
-    echo $select;
+    //echo $select;
     return $select;
   }
 

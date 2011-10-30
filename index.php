@@ -3,6 +3,9 @@
 include('source/clientlogin.php');
 include('source/sql.php');
 include('source/connectioninfo.php');
+include('source/fthelpers.php');
+
+//phpinfo();
 
 //get token
 $token = ClientLogin::getAuthToken(ConnectionInfo::$google_username, ConnectionInfo::$google_password);
@@ -12,13 +15,14 @@ $ftclient = new FTClientLogin($token);
 $result = $ftclient->query(SQLBuilder::select(ConnectionInfo::$fusionTableId));
 
 //echo $result;
+$csvArr = fthelpers::str_getcsv($result);
 
-$result = explode("\n", $result);
+//$result = explode("\n", $result);
 
-foreach ($result as $i => $value) {
-	//echo "exploding row $i<br />";
-    $result[$i] = explode(",", $value);
-}
+//foreach ($result as $i => $value) {
+//	//echo "exploding row $i<br />";
+//    $result[$i] = explode(",", $value);
+//}
 
 ?>
 
@@ -36,18 +40,18 @@ foreach ($result as $i => $value) {
 		<h1>Health Clinics in Chicago - Full List</h1>
 <?php
 
-echo "<table>\n";
+echo "<table class='data'>\n";
 
 //print table head
 echo "<thead><tr>\n";
-foreach ($result[0] as $i => $col) {
-	echo "<td>$col</td>\n";
+foreach ($csvArr[0] as $i => $col) {
+	echo "<th>$col</th>\n";
 }
 echo "</tr></thead>\n";
 
 //print table body
 echo "<tbody>\n";
-foreach ($result as $i => $row) {
+foreach ($csvArr as $i => $row) {
 	if ($i > 0)
 	{
 		echo "<tr>\n";
