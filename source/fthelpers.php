@@ -57,6 +57,13 @@ class fthelpers {
         } 
     } 
   
+    public static function format_address($street, $city, $state, $zip) {
+    	
+    	$result = str_replace(" ", "&nbsp;", $street);
+    	$result = $result . "<br />$city, $state $zip";
+    	return $result;
+    }
+  
 }
 
 ?>

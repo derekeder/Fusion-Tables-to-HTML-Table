@@ -78,7 +78,7 @@ foreach ($csvArr as $i => $row) {
 		echo "
 		<tr>
 		<td>$row[0]</td>
-		<td>$row[1]</td>
+		<td>" . fthelpers::format_address($row[3], $row[4], $row[5], $row[6]) . "</td>
 		<td>$row[10]</td>
 		<td>$row[9]</td>
 		<td>$row[2]</td>
@@ -115,7 +115,8 @@ echo "</tbody></table>\n";
 
 			</tbody>
 		</table>
-
+		<hr />
+		<p>A project by <a href='http://derekeder.com'>Derek Eder</a>.</p>
 		</div> 
 	</body>
 </html>
