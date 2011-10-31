@@ -25,7 +25,7 @@ $csvArr = fthelpers::str_getcsv($result);
 	<title>Health Clinics in Chicago - Full List</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 	
-	<link href='/styles/master.css' media='all' rel='stylesheet' type='text/css' />
+	<link href='styles/master.css' media='all' rel='stylesheet' type='text/css' />
 	
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script> 
 	<script src="/source/analytics_lib.js" type="text/javascript"></script>
@@ -88,6 +88,7 @@ foreach ($csvArr as $i => $row) {
 	}
 }
 /*
+//use this to print out all columns and rows
 //print table head
 echo "<thead><tr>\n";
 foreach ($csvArr[0] as $i => $col) {
