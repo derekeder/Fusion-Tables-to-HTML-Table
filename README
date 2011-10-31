@@ -1,0 +1,3 @@
+Google Fusion Tables to Pretty HTML Table
+
+Takes in a Fusion Table and outputs it in to an HTML table that is sortable and searchable with jQuery DataTables.
