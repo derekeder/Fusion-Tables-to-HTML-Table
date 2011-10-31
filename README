@@ -3,3 +3,10 @@ Google Fusion Tables to Pretty HTML Table
 Takes in a Fusion Table and outputs it in to an HTML table that is sortable and searchable with jQuery DataTables.
 
 Demo: http://derekeder.com/fusion-tables-to-html-table/demo/index.php
+
+usage
+1. copy source/connectioninfo.php.example to source/connectioninfo.php
+2. fill in your Google account info in source/connectioninfo.php
+3. customize what table columns you want to show in index.php (lines 39 and 63) or uncomment the block starting at line 93 to just dump the entire table
+
+Note: This is currently using a custom string to csv function to convert the cURL response from Fusion Tables to an array. If you have PHP 5.3+, you should use str_getcsv instead.
