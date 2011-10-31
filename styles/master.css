@@ -192,4 +192,4 @@ textarea { height: 10em; }
 .data th.sorting_desc { background-image: url(/images/arrow-secondary-down.gif); color: #366CB3; padding-left: 20px; }
 .dataTables_filter { font-size: 1.2em; margin-bottom: 10px; }
 .dataTables_filter input { padding: 0.2em; }
-tr.alt, tr.even { background: #faf1f9; }
+tr.alt, tr.even { background: #FAFAFF; }
