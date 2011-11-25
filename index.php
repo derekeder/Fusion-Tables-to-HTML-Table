@@ -14,6 +14,10 @@ $ftclient = new FTClientLogin($token);
 //select * from table
 $result = $ftclient->query(SQLBuilder::select(ConnectionInfo::$fusionTableId));
 
+// fix for empty fields - thanks Ondrej Vesely!
+while(strpos($result, ',,') !== false)
+    $result = str_replace(',,', ', ,', $result); //eventually $s will == ','
+
 //echo $result;
 $csvArr = fthelpers::str_getcsv($result);
 
