@@ -187,9 +187,9 @@ textarea { height: 10em; }
 .data thead th { border: 1px solid #ccc; }
 .data th { background-position: 0.5em 50%; background-repeat: no-repeat; cursor: pointer; padding: 0.5em; }
 .data th.sorting { color: #366CB3; }
-.data th.sorting_asc { background-image: url(/images/arrow-secondary-up.gif); color: #366CB3; padding-left: 20px; }
+.data th.sorting_asc { background-image: url(images/arrow-secondary-up.gif); color: #366CB3; padding-left: 20px; }
 .data th.sorting:hover { text-decoration: underline; }
-.data th.sorting_desc { background-image: url(/images/arrow-secondary-down.gif); color: #366CB3; padding-left: 20px; }
+.data th.sorting_desc { background-image: url(images/arrow-secondary-down.gif); color: #366CB3; padding-left: 20px; }
 .dataTables_filter { font-size: 1.2em; margin-bottom: 10px; }
 .dataTables_filter input { padding: 0.2em; }
 tr.alt, tr.even { background: #FAFAFF; }
