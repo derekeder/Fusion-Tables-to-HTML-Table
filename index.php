@@ -1,5 +1,17 @@
 <?php
 
+/*!
+ * Google Fusion Tables to HTML Table
+ * http://derekeder.com/fusion-tables-to-html-table/
+ *
+ * Copyright 2012, Derek Eder
+ * Licensed under the MIT license.
+ * https://github.com/derekeder/Fusion-Tables-to-HTML-Table/wiki/License
+ *
+ * Date: 5/2/2012
+ * 
+ */
+
 include('source/clientlogin.php');
 include('source/sql.php');
 include('source/connectioninfo.php');
