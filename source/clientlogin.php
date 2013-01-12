@@ -30,13 +30,13 @@ class FTClientLogin {
     $fusiontables_curl=curl_init();
     if(preg_match("/^select|^show tables|^describe/i", $query)) { 
    	  $query =  "sql=".urlencode($query);
-      curl_setopt($fusiontables_curl,CURLOPT_URL,"http://www.google.com/fusiontables/api/query?".$query);
+      curl_setopt($fusiontables_curl,CURLOPT_URL,"http://www.fusiontables.googleusercontent.com/fusiontables/api/query?".$query);
       curl_setopt($fusiontables_curl,CURLOPT_HTTPHEADER, array("Authorization: GoogleLogin auth=".$this->token));
     
     } else {
    	  $query = "sql=".urlencode($query);
       curl_setopt($fusiontables_curl,CURLOPT_POST, true);
-      curl_setopt($fusiontables_curl,CURLOPT_URL,"http://www.google.com/fusiontables/api/query");
+      curl_setopt($fusiontables_curl,CURLOPT_URL,"http://www.fusiontables.googleusercontent.com/fusiontables/api/query");
       curl_setopt($fusiontables_curl,CURLOPT_HTTPHEADER, array( 
         "Content-length: " . strlen($query), 
         "Content-type: application/x-www-form-urlencoded", 

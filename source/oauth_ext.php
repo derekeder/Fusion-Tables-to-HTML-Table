@@ -1,6 +1,6 @@
 <?php
 
-define('SCOPE', 'http://www.google.com/fusiontables/api/query');
+define('SCOPE', 'http://www.fusiontables.googleusercontent.com/fusiontables/api/query');
 define('SERVER_URI', 'https://www.google.com');
 define('GOOGLE_OAUTH_REQUEST_TOKEN_API', 'https://www.google.com/accounts/OAuthGetRequestToken');
 define('GOOGLE_OAUTH_ACCESS_TOKEN_API', 'https://www.google.com/accounts/OAuthGetAccessToken');
