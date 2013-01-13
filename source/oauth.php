@@ -3,7 +3,7 @@
 include_once "oauth-php/library/OAuthStore.php";
 include_once "oauth-php/library/OAuthRequester.php";
 
-define('SCOPE', 'http://www.fusiontables.googleusercontent.com/fusiontables/api/query');
+define('SCOPE', 'https://www.googleapis.com/fusiontables/v1/query');
 define('SERVER_URI', 'https://www.google.com');
 define('GOOGLE_OAUTH_REQUEST_TOKEN_API', 'https://www.google.com/accounts/OAuthGetRequestToken');
 define('GOOGLE_OAUTH_ACCESS_TOKEN_API', 'https://www.google.com/accounts/OAuthGetAccessToken');
@@ -23,7 +23,7 @@ class OAuthClient {
     //return the authorization URL. Redirect the header to this location.
     OAuthClient::storeInstance(OAuthClient::merge_options($consumer_key, $consumer_secret, $extra_options), $store);
   
-    $getAuthTokenParams = array('scope' => 'http://www.fusiontables.googleusercontent.com/fusiontables/api/query',
+    $getAuthTokenParams = array('scope' => 'https://www.googleapis.com/fusiontables/v1/query',
 									              'oauth_callback' => $callback);
 
 	  $tokenResultParams = OAuthRequester::requestRequestToken($consumer_key, $user_id, $getAuthTokenParams);
@@ -75,10 +75,10 @@ class FTOAuthClient {
   function query($query) {
   
   	if(preg_match("/^SELECT|^SHOW|^DESCRIBE/i", $query)) {
-		  $request = new OAuthRequester("http://www.fusiontables.googleusercontent.com/fusiontables/api/query?sql=".rawurlencode($query), 'GET');
+		  $request = new OAuthRequester("https://www.googleapis.com/fusiontables/v1/query?sql=".rawurlencode($query), 'GET');
 		
 	  } else {
-		  $request = new OAuthRequester("http://www.fusiontables.googleusercontent.com/fusiontables/api/query", 'POST', "sql=".rawurlencode($query));
+		  $request = new OAuthRequester("https://www.googleapis.com/fusiontables/v1/query", 'POST', "sql=".rawurlencode($query));
 		
 	  }
 	  $result = $request->doRequest($this->user_id);
