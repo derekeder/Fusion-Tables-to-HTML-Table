@@ -5,7 +5,7 @@ Takes in a Fusion Table and outputs it in to an HTML table that is sortable and 
 Demo: http://derekeder.com/fusion-tables-to-html-table/demo/index.php
 
 ### NOTE on Fusion Tables SQL API deprecation
-On Jan 14th, 2013 [Google deprecated the SQL API](https://developers.google.com/fusiontables/docs/developers_guide). This script has been updated to use the [Google Chart Tools API](https://developers.google.com/chart/interactive/docs/fusiontables).
+On Jan 14th, 2013 [Google deprecated the SQL API](https://developers.google.com/fusiontables/docs/developers_guide). This script has been updated to use the [Fusion Tables v1 API](https://developers.google.com/fusiontables/docs/v1/getting_started).
 
 ### Usage
 1. copy source/connectioninfo.php.example to source/connectioninfo.php
