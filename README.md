@@ -4,15 +4,13 @@ Takes in a Fusion Table and outputs it in to an HTML table that is sortable and 
 
 Demo: http://derekeder.com/fusion-tables-to-html-table/demo/index.php
 
-### NOTE on Fusion Tables SQL API deprecation
+### Updated to Fusion Tables v1 API
 On Jan 14th, 2013 [Google deprecated the SQL API](https://developers.google.com/fusiontables/docs/developers_guide). This script has been updated to use the [Fusion Tables v1 API](https://developers.google.com/fusiontables/docs/v1/getting_started).
 
 ### Usage
 1. copy source/connectioninfo.php.example to source/connectioninfo.php
-2. fill in your Google account info in source/connectioninfo.php
-3. customize what table columns you want to show in index.php (lines 39 and 63) or uncomment the block starting at line 93 to just dump the entire table
-
-Note: This is currently using a custom string to csv function to convert the cURL response from Fusion Tables to an array. If you have PHP 5.3+, you should use str_getcsv instead.
+2. fill in your Google account info and API key in source/connectioninfo.php. Go to the [Google API Console](https://code.google.com/apis/console/) to get your API Key.
+3. customize what table columns you want to show in index.php
 
 ## Dependencies
 
