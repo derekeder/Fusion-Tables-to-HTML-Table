@@ -17,6 +17,13 @@ include('source/sql.php');
 include('source/connectioninfo.php');
 include('source/fthelpers.php');
 
+function format_address($street, $city, $state, $zip) {
+	
+	$result = str_replace(" ", "&nbsp;", $street);
+	$result = $result . "<br />$city, $state $zip";
+	return $result;
+}
+
 //phpinfo();
 
 //get token
@@ -87,7 +94,7 @@ foreach ($result as $i => $row) {
 		echo "
 		<tr>
 		<td>$row[0]</td>
-		<td>" . fthelpers::format_address($row[3], $row[4], $row[5], $row[6]) . "</td>
+		<td>" . format_address($row[3], $row[4], $row[5], $row[6]) . "</td>
 		<td>$row[10]</td>
 		<td>$row[9]</td>
 		<td>$row[2]</td>
