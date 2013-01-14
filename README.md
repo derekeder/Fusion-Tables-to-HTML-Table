@@ -7,6 +7,8 @@ Demo: http://derekeder.com/fusion-tables-to-html-table/demo/index.php
 ### Updated to Fusion Tables v1 API
 On Jan 14th, 2013 [Google deprecated the SQL API](https://developers.google.com/fusiontables/docs/developers_guide). This script has been updated to use the [Fusion Tables v1 API](https://developers.google.com/fusiontables/docs/v1/getting_started).
 
+An __API key__ is now required and the results are returned as an 2 dimensional array. All the mess with handling blank values is no longer an issue. See index.php for an example of handling the updated format.
+
 ### Usage
 1. copy source/connectioninfo.php.example to source/connectioninfo.php
 2. fill in your Google account info and API key in source/connectioninfo.php. Go to the [Google API Console](https://code.google.com/apis/console/) to get your API Key.
