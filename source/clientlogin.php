@@ -52,8 +52,14 @@ class FTClientLogin {
 
     $json_result = json_decode($result);
 
+    $array_result = [$json_result->{'columns'}];
+    foreach ($json_result->{'rows'} as $row) {
+      array_push($array_result, $row);
+    }
+
     // returning as an array
-    return $json_result->{'rows'};
+    echo var_dump($array_result);
+    return $array_result;
 
     // This will return as a csv - not a good data format!
     // $csv_result = "";
