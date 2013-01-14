@@ -58,7 +58,7 @@ class FTClientLogin {
     }
 
     // returning as an array
-    echo var_dump($array_result);
+    //echo var_dump($array_result);
     return $array_result;
 
     // This will return as a csv - not a good data format!
