@@ -51,7 +51,7 @@ class FTClientLogin {
     curl_close($fusiontables_curl);
 
     $json_result = json_decode($result);
-    $array_result = array(array($json_result->{'columns'})) + $json_result->{'rows'};
+    $array_result = array_merge(array(array($json_result->{'columns'})), $json_result->{'rows'});
 
     // returning as an array
     //echo var_dump($array_result);

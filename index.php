@@ -44,7 +44,7 @@ $result = $ftclient->query(SQLBuilder::select(ConnectionInfo::$fusionTableId));
 	<link href='styles/master.css' media='all' rel='stylesheet' type='text/css' />
 	
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script> 
-	<script src="/source/analytics_lib.js" type="text/javascript"></script>
+	<!--<script src="/source/analytics_lib.js" type="text/javascript"></script>-->
 	<script src="source/jquery.dataTables.min.js" type="text/javascript"></script>
 	
 	<script type="text/javascript">
