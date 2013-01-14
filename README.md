@@ -14,9 +14,13 @@ On Jan 14th, 2013 [Google deprecated the SQL API](https://developers.google.com/
 
 Note: This is currently using a custom string to csv function to convert the cURL response from Fusion Tables to an array. If you have PHP 5.3+, you should use str_getcsv instead.
 
-## Still can't figure it out or more detail needed?
+## Dependencies
 
-Email me! [Derek Eder](mailto:derek.eder+git@gmail.com)
+* [Google Fusion Tables](http://www.google.com/fusiontables/Home)
+* [jQuery](http://jquery.org)
+* [Datatables](http://datatables.net/)
+* PHP
+* [PHP Fusion Tables Client Library](http://code.google.com/p/fusion-tables-client-php/)
 
 ## Contributors 
 
