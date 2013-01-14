@@ -66,19 +66,6 @@ class FTClientLogin {
     // echo $csv_result;
     // return $csv_result;
   }
-
-  function outputCSV($rows, $fieldNames = array())
-  {
-      if ($fp = fopen('php://output', 'w')) {
-          if ($fieldNames) {
-              fputcsv($fp, $fieldNames);
-          }
-          foreach ($rows as $row) {
-              fputcsv($fp, $row);
-          }
-          fclose($fp);
-      }
-  }
 }
 
 ?>
