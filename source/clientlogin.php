@@ -6,7 +6,7 @@ class ClientLogin {
     curl_setopt($clientlogin_curl,CURLOPT_URL,'https://www.google.com/accounts/ClientLogin');
     curl_setopt($clientlogin_curl, CURLOPT_POST, true); 
     curl_setopt ($clientlogin_curl, CURLOPT_POSTFIELDS,
-	    "Email=".$username."&Passwd=".$password."&service=fusiontables&accountType=GOOGLE");
+      "Email=".$username."&Passwd=".$password."&service=fusiontables&accountType=GOOGLE");
     curl_setopt($clientlogin_curl,CURLOPT_CONNECTTIMEOUT,30);
     curl_setopt($clientlogin_curl,CURLOPT_TIMEOUT,30);
     curl_setopt($clientlogin_curl,CURLOPT_RETURNTRANSFER,1);
@@ -29,12 +29,12 @@ class FTClientLogin {
     
     $fusiontables_curl=curl_init();
     if(preg_match("/^select|^show tables|^describe/i", $query)) { 
-   	  $query =  "sql=".urlencode($query)."&key=".ConnectionInfo::$googleApiKey;
+      $query =  "sql=".urlencode($query)."&key=".ConnectionInfo::$googleApiKey;
       curl_setopt($fusiontables_curl,CURLOPT_URL,"https://www.googleapis.com/fusiontables/v1/query?".$query);
       curl_setopt($fusiontables_curl,CURLOPT_HTTPHEADER, array("Authorization: GoogleLogin auth=".$this->token));
     
     } else {
-   	  $query = "sql=".urlencode($query)."&key=".ConnectionInfo::$googleApiKey;
+      $query = "sql=".urlencode($query)."&key=".ConnectionInfo::$googleApiKey;
       curl_setopt($fusiontables_curl,CURLOPT_POST, true);
       curl_setopt($fusiontables_curl,CURLOPT_URL,"https://www.googleapis.com/fusiontables/v1/query");
       curl_setopt($fusiontables_curl,CURLOPT_HTTPHEADER, array( 
@@ -51,7 +51,11 @@ class FTClientLogin {
     curl_close($fusiontables_curl);
 
     $json_result = json_decode($result);
-    $array_result = array_merge(array(array($json_result->{'columns'})), $json_result->{'rows'});
+    $rows = Array();
+    if (array_key_exists('rows', $json_result))
+      $rows = $json_result->{'rows'};
+
+    $array_result = array_merge(array(array($json_result->{'columns'})), $rows);
 
     // returning as an array
     //echo var_dump($array_result);
