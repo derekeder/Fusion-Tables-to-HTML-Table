@@ -2,7 +2,7 @@
 
 Takes in a Fusion Table and outputs it in to an HTML table that is sortable and searchable with jQuery DataTables. [More details](http://derekeder.com/fusion-tables-to-html-table/)
 
-Demo: http://derekeder.com/fusion-tables-to-html-table/demo/index.php
+Demo: http://old.derekeder.com/fusion-tables-to-html-table/demo/index.php
 
 ### Updated to Fusion Tables v1 API
 On Jan 14th, 2013 [Google deprecated the SQL API](https://developers.google.com/fusiontables/docs/developers_guide). This script has been updated to use the [Fusion Tables v1 API](https://developers.google.com/fusiontables/docs/v1/getting_started).
