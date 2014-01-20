@@ -15,7 +15,6 @@
 include('source/clientlogin.php');
 include('source/sql.php');
 include('source/connectioninfo.php');
-include('source/fthelpers.php');
 
 function format_address($street, $city, $state, $zip) {
 	
