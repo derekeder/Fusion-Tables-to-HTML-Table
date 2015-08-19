@@ -1,5 +1,7 @@
 ## Google Fusion Tables to HTML Table
 
+**This project is deprecated:** Google made some [recent changes to the Fusion Tables API](https://developers.google.com/fusiontables/docs/articles/oauthfusiontables) that broke this code, and I'm no longer maintaining it. You might want to check out [csv-to-html-table](https://github.com/derekeder/csv-to-html-table) instead.
+
 Takes in a Fusion Table and outputs it in to an HTML table that is sortable and searchable with jQuery DataTables. [More details](http://derekeder.com/fusion-tables-to-html-table/)
 
 Demo: http://old.derekeder.com/fusion-tables-to-html-table/demo/index.php
